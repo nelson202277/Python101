@@ -16,7 +16,7 @@ cd test # 進入 test 資料夾
 uv run main.py # 執行 main.py，並隱式建立 .venv 資料夾來存放環境數據  
 
 uv python install 3.11.11 # 安裝 Python 版本 3.11.11  
-python main.py # 正常執行 main.py  
+uv run python main.py # 正常執行 main.py  
 
 uv run --with jupyter jupyter lab # 啟動 Jupyter Lab  
 
