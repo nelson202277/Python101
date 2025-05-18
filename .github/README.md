@@ -13,12 +13,14 @@
 
 ![Terminal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/250px-DEC_VT100_terminal_transparent.png)
 
-在很久很久以前當圖形介面操作仍未開發出，連滑鼠也不知為何物的時代，終端機便是人與電腦互動的媒介。它是純粹的文字顯示媒介，相較於現今五光十色的圖形介面以純文字的方式顯示程式運行的結果是最有效率，也由於當時沒有程式會需要顯示圖片。如果你真的那麼叛逆。
+在很久很久以前當圖形介面操作仍未開發出，連滑鼠也不知為何物的時代，終端機便是人與電腦互動的媒介。它是純粹的文字顯示媒介，相較於現今五光十色的圖形介面以純文字的方式顯示程式運行的結果是最有效率，也由於當時沒有程式會需要顯示圖片。但也不是沒有辦法。
 
 <img src="https://blog.filestack.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-27-at-3.10.33-PM.png" width="45%" height="20%"><img src="https://velvetyne.fr/site/assets/files/2889/image-1.png" width="45%" height="45%">
 
 
-這樣如何?總之，那是最原始的互動模式，上面那台像是印象管電視的大傢伙只是為了顯示文字而存在的，可沒有甚麼鼠標會在你的螢幕上。圖形化介面的誕生，讓人機互動的方式更多樣化並且仰賴滑鼠操作，但文字的交互模式仍然無法被替代，終端機也變成終端模擬器(Terminal emulator)給取代，模仿終端機功能的應用程式。用終端機你可以以指令的方式操作電腦，例如切換目錄、列出路徑下所有檔案、複製檔案、移動檔案、開啟任何應用程式，~~並且讓其他人覺得你像駭客一樣酷~~。[學一下吧，很簡單的](https://www.youtube.com/watch?v=meI1f_N5ArI)[給windows用戶，只需看到11:50](https://www.youtube.com/watch?v=-fzO7iWCSWY)，[chatgpt](https://chatgpt.com/)也能幫得上忙。
+這樣如何?這可都是文字與符號呢!總之，那是最原始的互動模式，上面那台像是印象管電視的大傢伙只是為了顯示文字而存在的，可沒有甚麼鼠標會在你的螢幕上。圖形化介面的誕生，讓人機互動的方式更多樣化並且仰賴滑鼠操作，但文字的交互模式仍然無法被替代，終端機也變成終端模擬器(Terminal emulator)給取代，模仿終端機功能的應用程式。
+
+用終端機你可以以指令的方式操作電腦，例如切換目錄、列出路徑下所有檔案、複製檔案、移動檔案、開啟任何應用程式，~~並且讓其他人覺得你像駭客一樣酷~~。[學一下吧，很簡單的](https://www.youtube.com/watch?v=meI1f_N5ArI)[給windows用戶，只需看到11:50](https://www.youtube.com/watch?v=-fzO7iWCSWY)，[chatgpt](https://chatgpt.com/)也能幫得上忙。你至少需要知道如何切換目錄。有些令只有在特定路徑底下才會成功。
 
 # 注意如果你一開始學習使用終端機在使用`rm`指令的時候要格外小心，
 ## 這是刪除檔案的指令，一不小心你會把整台電腦的檔案給刪掉。如果你沒有信心，用你熟悉的滑鼠做這個任務。告訴你一個事實，曾有一個工程師在曾經用這個指令意外刪除大半個伺服器資料。我也曾經把一天寫好的程式碼資料夾給全部刪除。`rm`雖然可怕，我建議你熟習其他操作後再慢慢嘗試這個。
@@ -84,7 +86,7 @@ from itertools import chain
 - **自動補全（Completion Hint）：**
     |程式碼編輯軟體   |記事本   |
     |-----------------|---------|
-        | ![vscode image](https://i.sstatic.net/RCO3y.png) | ![note image](https://github.com/user-attachments/assets/aebf8c95-78b4-42f4-a1d7-0ef525a38bd4)|
+    | ![vscode image](https://i.sstatic.net/RCO3y.png) | ![note image](https://github.com/user-attachments/assets/aebf8c95-78b4-42f4-a1d7-0ef525a38bd4)|
 
     - 輸入 `d` -> 提示 `def`  
     - 輸入 `p` -> 提示 `print`  
