@@ -12,10 +12,11 @@
 ### 終端機 Terminal
 
 ![Terminal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/250px-DEC_VT100_terminal_transparent.png)
+
 在很久很久以前當圖形介面操作仍未開發出，連滑鼠也不知為何物的時代，終端機便是人與電腦互動的媒介。它是純粹的文字顯示媒介，相較於現今五光十色的圖形介面以純文字的方式顯示程式運行的結果是最有效率，也由於當時沒有程式會需要顯示圖片。如果你真的那麼叛逆。
 
-![ASCII Art1](https://velvetyne.fr/site/assets/files/2889/image-1.png)
-![ASCII Art2](https://blog.filestack.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-27-at-3.10.33-PM.png)
+<img src="https://blog.filestack.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-27-at-3.10.33-PM.png" width="45%" height="20%"><img src="https://velvetyne.fr/site/assets/files/2889/image-1.png" width="45%" height="45%">
+
 
 這樣如何?總之，那是最原始的互動模式，上面那台像是印象管電視的大傢伙只是為了顯示文字而存在的，可沒有甚麼鼠標會在你的螢幕上。圖形化介面的誕生，讓人機互動的方式更多樣化並且仰賴滑鼠操作，但文字的交互模式仍然無法被替代，終端機也變成終端模擬器(Terminal emulator)給取代，模仿終端機功能的應用程式。用終端機你可以以指令的方式操作電腦，例如切換目錄、列出路徑下所有檔案、複製檔案、移動檔案、開啟任何應用程式，~~並且讓其他人覺得你像駭客一樣酷~~。[學一下吧，很簡單的](https://www.youtube.com/watch?v=meI1f_N5ArI)[給windows用戶，只需看到11:50](https://www.youtube.com/watch?v=-fzO7iWCSWY)，[chatgpt](https://chatgpt.com/)也能幫得上忙。
 
