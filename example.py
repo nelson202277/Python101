@@ -7,8 +7,8 @@ import time
 # openai.api_key = os.getenv("OPENAI_API_KEY")  # or replace with your key as a string
 # client = openai.OpenAI()
 client = openai.OpenAI(base_url="http://127.0.0.1:8000/v1", api_key="test")
-input_file = "../test/example.csv"
-output_file = "../test/example_output.csv"
+input_file = "test/example.csv"
+output_file = "test/example_output.csv"
 
 
 def get_capital(nation):
@@ -30,17 +30,16 @@ def main():
     with open(input_file, newline="") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            nation = row["Nation"]
+            nation = row["City"]
             answer = get_capital(nation)
             print(f"Nation: {nation} -> {answer}")
             results.append({"Nation": nation, "Capital_Answer": answer})
             time.sleep(1)  # avoid rate limiting
 
     with open(output_file, "w", newline="") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=["Nation", "Capital_Answer"])
+        writer = csv.DictWriter(csvfile, fieldnames=["City", "Capital_Answer"])
         writer.writeheader()
         writer.writerows(results)
 
 
-if __name__ == "__main__":
-    main()
+main()

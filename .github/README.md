@@ -101,4 +101,10 @@ GitHub 是一個程式碼倉庫分享的平台讓各個程式碼倉庫擁有自�
 
 
 ## Install UV
+
 [接下來就來進行安裝吧](../doc/UV_zh.md)
+
+
+## 語法介紹
+
+[語法介紹](../syntax/Python101.ipynb)

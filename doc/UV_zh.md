@@ -10,7 +10,7 @@ UV是一個套件/環境/Python 管理工具。
 1. 建立一個資料夾，這個資料夾就專們存放一個專案內的程式。  
 2. 打開終端機[?](./Terminal.md)，按照以下步驟執行(每一行為一個命令，逐步執行，*#*以後的是註解，可以選擇不輸入)：  
 
-```bash
+```shell
 uv init test --app # 創建一個名為 test 的專案資料夾  
 cd test # 進入 test 資料夾  
 uv run main.py # 執行 main.py，並隱式建立 .venv 資料夾來存放環境數據  
@@ -29,7 +29,7 @@ uv run --with jupyter jupyter lab # 啟動 Jupyter Lab
 
 3. UV 的功能不僅限於上述操作，使用 `--help` 獲取更多資訊：  
 
-```bash
+```shell
 uv --help #所有子命令
 uv add --help # 安裝套件
 uv remove --help  # 移除套件
@@ -40,7 +40,7 @@ uv tree --help # 印出環境內套件相依性
 
 4. 例如：安裝套件  
 
-```bash
+```shell
 uv add pandas
 ```
 
