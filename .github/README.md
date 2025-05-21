@@ -9,21 +9,31 @@
 ## 在開始寫Python程式之前...
 
 
-### 終端機 Terminal
+### 1. 終端機 Terminal
 
-![Terminal](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/250px-DEC_VT100_terminal_transparent.png)
+<p align="center">
+<img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/250px-DEC_VT100_terminal_transparent.png" width="45%" height="20%">
+</p>
+
 
 在很久很久以前當圖形介面操作仍未開發出，連滑鼠也不知為何物的時代，終端機便是人與電腦互動的媒介。它是純粹的文字顯示媒介，相較於現今五光十色的圖形介面以純文字的方式顯示程式運行的結果是最有效率，也由於當時沒有程式會需要顯示圖片。但也不是沒有辦法。
 
-<img src="https://blog.filestack.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-27-at-3.10.33-PM.png" width="45%" height="20%"><img src="https://velvetyne.fr/site/assets/files/2889/image-1.png" width="45%" height="45%">
 
+<p>
+    <img align="center" src="https://blog.filestack.com/wp-content/uploads/2017/01/Screen-Shot-2017-01-27-at-3.10.33-PM.png" width="45%" height="20%" alt="image">
+    <img  align="center" src="https://velvetyne.fr/site/assets/files/2889/image-1.png" width="45%" height="45%" alt="image">
+</p>
+
+---
 
 這樣如何?這可都是文字與符號呢!總之，那是最原始的互動模式，上面那台像是印象管電視的大傢伙只是為了顯示文字而存在的，可沒有甚麼鼠標會在你的螢幕上。圖形化介面的誕生，讓人機互動的方式更多樣化並且仰賴滑鼠操作，但文字的交互模式仍然無法被替代，終端機也變成終端模擬器(Terminal emulator)給取代，模仿終端機功能的應用程式。
-
+    
 用終端機你可以以指令的方式操作電腦，例如切換目錄、列出路徑下所有檔案、複製檔案、移動檔案、開啟任何應用程式，~~並且讓其他人覺得你像駭客一樣酷~~。[學一下吧，很簡單的](https://www.youtube.com/watch?v=meI1f_N5ArI)[給windows用戶，只需看到11:50](https://www.youtube.com/watch?v=-fzO7iWCSWY)，[chatgpt](https://chatgpt.com/)也能幫得上忙。你至少需要知道如何切換目錄。有些令只有在特定路徑底下才會成功。
 
-# 注意如果你一開始學習使用終端機在使用`rm`指令的時候要格外小心，
-## 這是刪除檔案的指令，一不小心你會把整台電腦的檔案給刪掉。如果你沒有信心，用你熟悉的滑鼠做這個任務。告訴你一個事實，曾有一個工程師在曾經用這個指令意外刪除大半個伺服器資料。我也曾經把一天寫好的程式碼資料夾給全部刪除。`rm`雖然可怕，我建議你熟習其他操作後再慢慢嘗試這個。
+> [!CAUTION]
+> 注意如果你一開始學習使用終端機在使用`rm`指令的時候要格外小心。
+>
+> 這是刪除檔案的指令，一不小心你會把整台電腦的檔案給刪掉。如果你沒有信心，用你熟悉的滑鼠做這個任務。告訴你一個事實，曾有一個工程師在曾經用這個指令意外刪除大半個伺服器資料。我也曾經把一天寫好的程式碼資料夾給全部刪除。`rm`雖然可怕，我建議你熟習其他操作後再慢慢嘗試這個。
 
 ### --help
 
@@ -33,12 +43,16 @@
 ls --help
 cd --help
 ```
+---  
 
-### 直譯 vs 編譯 -> transpile vs compile
+### 2. 直譯 vs 編譯 -> transpile vs compile
 
 執行python程式大部分都是利用Python直譯器將python的代碼文件在執行時邊翻譯成機器可讀的指令傳送給機器CPU執行。 直譯器就是個將python代碼翻譯成最底層的機器指令的媒介；與其他*編譯*語言不同，像是C語言，*編譯*語言需要將代碼文件在執行前將所有的代碼翻譯成執行檔(我們熟知的.exe檔案)後再運行該執行檔，只要代碼有任何修改，都必須再次編譯。雖然在執行效率上直譯語言較差，但是你不需要等待編譯的時間，有時編譯一個大的檔案會需要很久呢。
 
-![compile meme](https://www.incredibuild.com/wp-content/uploads/2021/07/meme-1_fencing.jpg)
+<p align="center">
+<img  src="https://www.incredibuild.com/wp-content/uploads/2021/07/meme-1_fencing.jpg" >    
+</p>
+
 
 到此你知道要運行Python文件需要Python直譯器。那麼如果你已經安裝好Python直譯器你可以在終端機且在你放代碼的路徑底下輸入`python test.py` 運行test.py(只要你寫的代碼不需要額外的*參數*)，所謂*參數*是指，有時候為了泛用性我們會將代碼設計需要額外*參數*來運行，它看器來會像這樣`python test.py --arg1 abc --arg2 123 -arg3 456` 這表示執行test.py這隻程式我還給予了三個參數分別是arg1，arg2，arg3；三者的值分別是abc，123，456(先不考慮傳入的值在程式中會是甚麼型態)。一個參數都是由一個或兩個\*-\*組成，並且後面立即跟隨對應的數值，雖然有些參數並不需要給予數值，我們稱這種是*flag*，通常表示有了這個*flag*之下某個設定是開啟或關閉的，不給予*flag*代表某個設定是關閉或開啟的。一個常見的例子是設定傳入與輸出的路徑參數:`python test.py --input test.txt --output test_output.txt`。
 
@@ -54,7 +68,9 @@ hello_world()
 開啟終端機且切換路徑到該文件底下輸入`python Hellow_world.py` 你應該就會看到**Hello world**的訊息被打印在你的終端機上。這樣的過程就是寫python程式的縮影，編輯代碼文字->執行代碼檢查結果是否正確->再次編輯代碼...
 
 
-### 套件管理工具
+---  
+
+### 3. 套件管理工具
 
 所謂套件如同寫文章時會引用其他人的文句，寫程式也會直接使用他人寫的程式。例如文章的引用可能像是這樣
 
@@ -79,7 +95,7 @@ from itertools import chain
 2. 再來，你必須知道套件事有不同版本的，當你寫A專案的程式需要的套件A只支援到10.0.1版但專案B同樣需要套件A但它需要至少11.0版。此時你就需要一個管理這些套件
 3. 最後，你需要為不同的專案建立不同的 *虛擬環境* 也就是改變python搜尋套件的設定與套件下載路徑，讓python只搜尋在專案底下的的第三方套件
 
-### 甚麼是程式碼編輯器/整合開發環境（integrated development environment)，IDE?
+### 4. 甚麼是程式碼編輯器/整合開發環境（integrated development environment)，IDE?
 
 你能只用記事本來完成所有程式碼的撰寫，但IDE能幫你，調量程式碼、自動補全建議、以及一些其他有助於生產力的工具或插件讓你比較容易編輯程式碼，像是AI工具集成的程式碼編輯器可以讓你把程式碼給AI看讓它基於你的要求給出具體建議。
 
@@ -97,17 +113,19 @@ from itertools import chain
         - `def hello_world()` -> `def`（綠色） `hello_world()`（白色）  
 
 常見的程式碼編輯環境有*Vs code/Pycharm/IntelliJ/Jupyter/Colab*。
+> [!NOTE] 
+> 我為你選了
+>
+> 1. Jupyter 最陽春的編輯方式
+> 2. uv 套件/環境管理工具，並用UV安裝python直譯器
 
-### 我為你選了
+---  
 
-1. Jupyter 最陽春的編輯方式
-2. uv 套件/環境管理工具，並用UV安裝python直譯器
-
-
-### GitHub
+## GitHub
 
 GitHub 是一個程式碼倉庫分享的平台讓各個程式碼倉庫擁有自己的討論區，讓不同人一起協作。要和作者群回報問題或詢問程式細節都會到Issue進行發問，[這是這個代碼庫的討論區](https://github.com/nelson202277/Python101/issues)，只要有人在上面留言作者就會收到Email通知
 
+---  
 
 
 ## Install UV
@@ -115,10 +133,14 @@ GitHub 是一個程式碼倉庫分享的平台讓各個程式碼倉庫擁有自�
 [接下來就來進行安裝吧](../doc/UV_zh.md)
 
 
+---  
+
 ## 語法介紹
 
 [語法介紹](../syntax/Python101.ipynb)
 [Boot.dev](https://www.boot.dev/)
+
+---  
 
 ## 簡單openai範例程式
 
